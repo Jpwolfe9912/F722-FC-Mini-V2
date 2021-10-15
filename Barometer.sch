@@ -1,0 +1,177 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 5 8
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 5650 3850 0    50   Input ~ 0
+I2C3_SDA
+Text HLabel 5650 3750 0    50   Input ~ 0
+I2C3_SCL
+$Comp
+L power:+3V3 #PWR0110
+U 1 1 608E9117
+P 6050 3550
+F 0 "#PWR0110" H 6050 3400 50  0001 C CNN
+F 1 "+3V3" H 6065 3723 50  0000 C CNN
+F 2 "" H 6050 3550 50  0001 C CNN
+F 3 "" H 6050 3550 50  0001 C CNN
+	1    6050 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0171
+U 1 1 608EAE19
+P 6150 4250
+F 0 "#PWR0171" H 6150 4000 50  0001 C CNN
+F 1 "GND" H 6155 4077 50  0000 C CNN
+F 2 "" H 6150 4250 50  0001 C CNN
+F 3 "" H 6150 4250 50  0001 C CNN
+	1    6150 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 4250 6050 4250
+$Comp
+L power:+3V3 #PWR0174
+U 1 1 60872AF9
+P 7150 3750
+F 0 "#PWR0174" H 7150 3600 50  0001 C CNN
+F 1 "+3V3" H 7165 3923 50  0000 C CNN
+F 2 "" H 7150 3750 50  0001 C CNN
+F 3 "" H 7150 3750 50  0001 C CNN
+	1    7150 3750
+	1    0    0    -1  
+$EndComp
+Text HLabel 7450 3850 2    50   Input ~ 0
+I2C3_SCL
+Text HLabel 7450 4050 2    50   Input ~ 0
+I2C3_SDA
+$Comp
+L Device:R_Small R5
+U 1 1 608730BE
+P 7350 3850
+F 0 "R5" V 7250 3850 50  0000 C CNN
+F 1 "4.7k" V 7350 3850 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 7350 3850 50  0001 C CNN
+F 3 "~" H 7350 3850 50  0001 C CNN
+	1    7350 3850
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R8
+U 1 1 60873AA2
+P 7350 4050
+F 0 "R8" V 7250 4050 50  0000 C CNN
+F 1 "4.7k" V 7350 4050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 7350 4050 50  0001 C CNN
+F 3 "~" H 7350 4050 50  0001 C CNN
+	1    7350 4050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7150 3750 7150 3850
+Wire Wire Line
+	7150 3850 7250 3850
+Wire Wire Line
+	7150 3850 7150 4050
+Wire Wire Line
+	7150 4050 7250 4050
+Connection ~ 7150 3850
+$Comp
+L power:+3V3 #PWR0175
+U 1 1 60875CC0
+P 7100 3000
+F 0 "#PWR0175" H 7100 2850 50  0001 C CNN
+F 1 "+3V3" H 7115 3173 50  0000 C CNN
+F 2 "" H 7100 3000 50  0001 C CNN
+F 3 "" H 7100 3000 50  0001 C CNN
+	1    7100 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C10
+U 1 1 60876227
+P 7400 3100
+F 0 "C10" H 7492 3146 50  0000 L CNN
+F 1 "0.1uF" H 7450 3050 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 7400 3100 50  0001 C CNN
+F 3 "~" H 7400 3100 50  0001 C CNN
+	1    7400 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C9
+U 1 1 6087626C
+P 7100 3100
+F 0 "C9" H 7192 3146 50  0000 L CNN
+F 1 "0.1uF" H 7150 3050 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 7100 3100 50  0001 C CNN
+F 3 "~" H 7100 3100 50  0001 C CNN
+	1    7100 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 3000 7400 3000
+$Comp
+L power:GND #PWR0176
+U 1 1 60877E25
+P 7100 3200
+F 0 "#PWR0176" H 7100 2950 50  0001 C CNN
+F 1 "GND" H 7105 3027 50  0000 C CNN
+F 2 "" H 7100 3200 50  0001 C CNN
+F 3 "" H 7100 3200 50  0001 C CNN
+	1    7100 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 3200 7400 3200
+$Comp
+L Sensor_Pressure:BMP280 U4
+U 1 1 60D6237A
+P 6050 3950
+F 0 "U4" H 6280 4046 50  0000 L CNN
+F 1 "BMP280" H 6280 3955 50  0000 L CNN
+F 2 "Package_LGA:Bosch_LGA-8_2x2.5mm_P0.65mm_ClockwisePinNumbering" H 6050 3250 50  0001 C CNN
+F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BMP280-DS001.pdf" H 6050 3950 50  0001 C CNN
+	1    6050 3950
+	1    0    0    -1  
+$EndComp
+Connection ~ 6150 4250
+Wire Wire Line
+	6050 3550 6150 3550
+Connection ~ 6050 3550
+Wire Wire Line
+	5650 3950 5550 3950
+Wire Wire Line
+	5550 3950 5550 4250
+Wire Wire Line
+	5550 4250 6050 4250
+Connection ~ 6050 4250
+$Comp
+L power:+3V3 #PWR0103
+U 1 1 60D6B9F1
+P 5100 3950
+F 0 "#PWR0103" H 5100 3800 50  0001 C CNN
+F 1 "+3V3" H 5115 4123 50  0000 C CNN
+F 2 "" H 5100 3950 50  0001 C CNN
+F 3 "" H 5100 3950 50  0001 C CNN
+	1    5100 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 3950 5100 4050
+Wire Wire Line
+	5100 4050 5650 4050
+Connection ~ 7100 3000
+Connection ~ 7100 3200
+$EndSCHEMATC
