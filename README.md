@@ -1,1 +1,1 @@
-# EW281C Flight Controller
+# F722-FC-Mini-V2
